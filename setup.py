@@ -1,12 +1,29 @@
-from distutils.core import setup
+import pathlib
+from setuptools import setup, find_packages
 
-setup(name="TkinterWeb",
-      version="1.0.0",
-      description="Fork of TkinterWeb for read",
-      license='MIT',
-      author="ariez_xyz",
-      author_email="",
-      url='https://github.com/ariez-xyz/TkinterWeb',
-      packages=['tkinterweb'],
-      install_requires=["pillow"],
+HERE = pathlib.Path(__file__).parent
+README = (HERE / "README.md").read_text()
+
+setup(
+    name="tkinterweb",
+    version="3.14.3",
+    description="HTML/CSS viewer for Tkinter - bindings for Tkhtml3",
+    long_description=README,
+    long_description_content_type="text/markdown",
+    url="https://github.com/Andereoo/TkinterWeb",
+    license="MIT",
+    classifiers=[
+        "Intended Audience :: Developers",
+        "License :: Freeware",
+        "License :: OSI Approved :: MIT License",
+        "Natural Language :: English",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 2",
+        "Programming Language :: Python :: 3",
+        "Topic :: Software Development",
+      ],
+    keywords="tkinter, Tkinter, tkhtml, Tkhtml, Tk, HTML, CSS, webbrowser",
+    packages=find_packages(),
+    include_package_data=True,
+    install_requires=["pillow"],
 )
