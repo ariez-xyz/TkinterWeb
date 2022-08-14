@@ -7,5 +7,6 @@ setup(name="TkinterWeb",
       author="ariez_xyz",
       author_email="",
       url='https://github.com/ariez-xyz/TkinterWeb',
-      packages=['tkinterweb']
+      packages=['tkinterweb'],
+      install_requires=["pillow"],
 )
